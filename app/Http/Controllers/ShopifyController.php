@@ -8,11 +8,11 @@ class ShopifyController extends Controller
 {
     protected $shop = "https://miamitees.myshopify.com/";
 	protected $foo;
-	protected $scopes = ['read_products','read_themes'];
+	protected $scope = ['read_products','read_themes'];
 	  
 	public function getPermission(){
 
-	    $this->foo = Shopify::make($this->shop, $this->scopes);
+	    $this->foo = Shopify::make($this->shop, $this->scope);
 
 	    return $this->foo->redirect();
 	  
