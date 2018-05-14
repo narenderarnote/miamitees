@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Shopify;
 class ShopifyController extends Controller
 {
-    protected $shop = "example.myshopify.com";
+    protected $shop = "https://miamitees.myshopify.com/";
 	protected $foo;
 	protected $scopes = ['read_products','read_themes'];
 	  
