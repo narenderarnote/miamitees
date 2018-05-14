@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Shopify;
+
 class ShopifyController extends Controller
 {
-    protected $shop = "https://miamitees.myshopify.com/";
+    protected $shop ="https://miamitees.myshopify.com";
 	protected $foo;
 	protected $scope = ['read_products','read_themes'];
 	  
 	public function getPermission(){
 
-	    $this->foo = Shopify::make($this->shop, $this->scope);
+	    $this->foo = Shopify::make($this->shop,$this->scope);
 
 	    return $this->foo->redirect();
 	  
