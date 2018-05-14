@@ -12,10 +12,9 @@ class ShopifyController extends Controller
 	  
 	public function getPermission(){
 
-	    $this->foo = Shopify::retrieve($this->shop, $access_token);
+	    $this->foo = Shopify::make($this->shop, $this->scope);
 
-		//Get the user information
-		$user = $this->foo->getUser();
+	    return $this->foo->redirect();
 	  
 	}
 	  
